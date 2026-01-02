@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gael Dev Portfolio v1.0
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 
-First, run the development server:
+Bienvenido al repositorio oficial de mi portafolio profesional y blog personal. Este proyecto está diseñado para ser rápido, accesible y fácil de mantener.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologías
+
+Este sitio está construido sobre un stack moderno enfocado en el rendimiento y la experiencia de desarrollador:
+
+-   **[Next.js 15 (App Router)](https://nextjs.org/)**: Framework React para producción.
+-   **[Tailwind CSS v4](https://tailwindcss.com/)**: Sistema de diseño utility-first.
+-   **[TypeScript](https://www.typescriptlang.org/)**: Para un código robusto y tipado.
+-   **[MDX](https://mdxjs.com/)**: Contenido del blog escrito en Markdown + JSX.
+-   **[Framer Motion](https://www.framer.com/motion/)**: Animaciones fluidas.
+-   **[Lucide React](https://lucide.dev/)**: Iconografía moderna.
+
+## 🛠️ Instalación y Uso Local
+
+Sigue estos pasos para correr el proyecto en tu máquina:
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/tu-usuario/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## 📝 Gestión del Blog
+
+El blog utiliza **MDX**, lo que significa que no necesitas una base de datos externa.
+
+1.  Ve a la carpeta `content/blog`.
+2.  Crea un nuevo archivo con extensión `.mdx` (ej: `mi-nuevo-post.mdx`).
+3.  Añade el "Frontmatter" necesario al inicio del archivo:
+
+```yaml
+---
+title: "Título de mi Post"
+publishedAt: "2025-01-01"
+summary: "Una breve descripción que aparecerá en la lista."
+---
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.  ¡Escribe tu contenido debajo! Puedes usar Markdown estándar y componentes React.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📬 Contacto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El formulario de contacto está preparado para integrarse con **Resend**.
+Para activarlo en producción:
 
-## Learn More
+1.  Crea una cuenta en [Resend](https://resend.com/).
+2.  Configura la variable de entorno `RESEND_API_KEY` en tu hosting (Vercel).
+3.  Implementa la lógica de envío en `app/api/send/route.ts` (código comentado incluido).
 
-To learn more about Next.js, take a look at the following resources:
+## ☁️ Despliegue
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+La forma más fácil de desplegar es usar **[Vercel](https://vercel.com/)**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  Sube tu código a GitHub.
+2.  Importa el repositorio en Vercel.
+3.  Click en "Deploy".
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hecho con ❤️ por **Gael Dev**.
