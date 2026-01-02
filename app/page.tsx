@@ -17,8 +17,8 @@ export default function Home() {
           Hola, soy Gael 👋
         </h1>
         <p className="max-w-[700px] text-muted-foreground md:text-xl">
-          Desarrollador web apasionado por crear experiencias digitales únicas.
-          Especializado en el ecosistema React y Next.js.
+          Desarrollador Full-Stack Multiplataforma.
+          Me apasiona construir soluciones robustas que conecten el backend con experiencias de usuario fluidas en web y móvil.
         </p>
       </div>
 
@@ -35,19 +35,6 @@ export default function Home() {
         >
           Ver Proyectos
         </Link>
-      </div>
-
-      <div className="pt-8">
-        <h2 className="text-2xl font-bold tracking-tight mb-4">Sobre este sitio</h2>
-        <p className="text-muted-foreground mb-4">
-          Este portafolio está construido con las últimas tecnologías web para asegurar el mejor rendimiento:
-        </p>
-        <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-          <li>Next.js 15 (App Router)</li>
-          <li>Tailwind CSS v4</li>
-          <li>MDX para contenido</li>
-          <li>Framer Motion para animaciones</li>
-        </ul>
       </div>
     </section>
   )
