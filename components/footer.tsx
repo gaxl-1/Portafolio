@@ -1,3 +1,5 @@
+import { SocialLinks } from "@/components/social-links"
+
 /**
  * Componente de pie de página global.
  *
@@ -14,6 +16,9 @@ export function Footer() {
                         Built by <span className="font-medium underline underline-offset-4">Gael</span>.
                         Source code available on GitHub.
                     </p>
+                    <div className="ml-auto">
+                        <SocialLinks />
+                    </div>
                 </div>
             </div>
         </footer>

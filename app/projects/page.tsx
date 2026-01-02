@@ -7,22 +7,28 @@ import { ArrowUpRight } from "lucide-react"
  */
 const projects = [
     {
-        title: "Compritas App",
-        description: "Aplicación de compras con autenticación y gestión de carrito.",
-        link: "https://github.com/gaxl-1/compritas", // Placeholder link
-        tech: ["Next.js", "Tailwind", "Supabase"],
+        title: "Sistema Bancario Web",
+        description: "Plataforma web para gestión de transacciones bancarias, simulando un entorno financiero real y seguro.",
+        link: "https://github.com/gaxl-1/sistema-bancario-web",
+        tech: ["Python", "Django", "Web"],
     },
     {
-        title: "Task Manager",
-        description: "Gestor de tareas CRUD con Spring Boot y React.",
-        link: "https://github.com/gaxl-1/task-manager",
-        tech: ["Java", "Spring Boot", "React"],
+        title: "BT Car Controller",
+        description: "Controlador para coche robot mediante Bluetooth. Integración de hardware y software para control remoto.",
+        link: "https://github.com/gaxl-1/bt-car-controller",
+        tech: ["C++", "Arduino", "Bluetooth"],
     },
     {
-        title: "Banking App",
-        description: "Sistema bancario simulado con transacciones.",
-        link: "https://github.com/gaxl-1/banking-app",
-        tech: ["Python", "Django", "PostgreSQL"],
+        title: "Compritas",
+        description: "Aplicación moderna para gestión de compras, listas inteligentes y seguimiento de gastos.",
+        link: "https://github.com/gaxl-1/Compritas",
+        tech: ["Mobile", "UX/UI", "App"],
+    },
+    {
+        title: "Coyotex",
+        description: "Proyecto innovador de desarrollo de software con enfoque en escalabilidad y rendimiento.",
+        link: "https://github.com/gaxl-1/Coyotex",
+        tech: ["Software", "Dev", "Full Stack"],
     },
 ]
 
@@ -49,18 +55,22 @@ export default function ProjectsPage() {
                         key={index}
                         href={project.link}
                         target="_blank"
-                        className="group flex flex-col space-y-2 rounded-lg border p-4 transition-colors hover:bg-accent/50"
+                        className="group flex flex-col space-y-3 rounded-xl border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:bg-accent/50"
                     >
                         <div className="flex items-center justify-between">
-                            <h3 className="font-medium tracking-tight group-hover:underline">
-                                {project.title}
-                            </h3>
+                            <div className="flex items-center gap-2">
+                                <h3 className="font-medium text-lg tracking-tight group-hover:underline decoration-primary decoration-2 underline-offset-4">
+                                    {project.title}
+                                </h3>
+                            </div>
                             <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
                         </div>
-                        <p className="text-sm text-muted-foreground">{project.description}</p>
-                        <div className="flex gap-2 pt-2">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 pt-2 mt-auto">
                             {project.tech.map((t) => (
-                                <span key={t} className="rounded-full bg-secondary px-2.5 py-0.5 text-xs text-secondary-foreground">
+                                <span key={t} className="rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-secondary-foreground">
                                     {t}
                                 </span>
                             ))}

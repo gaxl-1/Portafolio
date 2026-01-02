@@ -1,3 +1,5 @@
+import { SocialLinks } from "@/components/social-links"
+
 export const metadata = {
     title: "Sobre Mí",
     description: "Conoce más sobre Gael Dev.",
@@ -39,6 +41,9 @@ export default function AboutPage() {
                     ¿Tienes un proyecto en mente? Me encantaría escucharlo.
                     Puedes contactarme a través de mis redes sociales o enviarme un correo.
                 </p>
+                <div className="not-prose mt-4">
+                    <SocialLinks />
+                </div>
             </div>
         </section>
     )
