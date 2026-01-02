@@ -31,27 +31,49 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <h3 className="font-medium mb-2">Backend</h3>
-                        <p className="text-sm text-muted-foreground">Java, Kotlin, Spring Boot</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+                            <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+                            <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" />
+                        </div>
                     </div>
                     <div>
                         <h3 className="font-medium mb-2">Frontend</h3>
-                        <p className="text-sm text-muted-foreground">React, TypeScript, JavaScript</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+                            <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+                            <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+                        </div>
                     </div>
                     <div>
                         <h3 className="font-medium mb-2">Móvil</h3>
-                        <p className="text-sm text-muted-foreground">Android, Kotlin</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
+                            <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+                        </div>
                     </div>
                     <div>
                         <h3 className="font-medium mb-2">Bases de Datos</h3>
-                        <p className="text-sm text-muted-foreground">PostgreSQL, MySQL, MongoDB</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+                            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+                            <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                        </div>
                     </div>
                     <div>
                         <h3 className="font-medium mb-2">Infraestructura</h3>
-                        <p className="text-sm text-muted-foreground">Docker, Kubernetes</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+                            <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+                        </div>
                     </div>
                     <div>
                         <h3 className="font-medium mb-2">Herramientas</h3>
-                        <p className="text-sm text-muted-foreground">Git, GitHub, Trello</p>
+                        <div className="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+                            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+                            <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=trello&logoColor=white" alt="Trello" />
+                        </div>
                     </div>
                 </div>
 

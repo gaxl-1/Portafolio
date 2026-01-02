@@ -19,7 +19,7 @@ export default function ContactPage() {
         <section className="max-w-2xl mx-auto">
             <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Contacto</h1>
             <p className="text-muted-foreground mb-8">
-                Si estás interesado en colaborar o simplemente quieres saludar,
+                Si estás interesado en colaborar, tienes una idea en mente para realizar o simplemente quieres saludar,
                 ¡rellena el formulario a continuación o búscame en mis redes!
             </p>
             <div className="mb-8">
