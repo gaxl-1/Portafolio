@@ -31,7 +31,7 @@ export function HeroSection() {
                                 sequence={[
                                     'Desarrollador Full-Stack Multiplataforma',
                                     2000,
-                                    'Especialista en React y Next.js',
+                                    'Creador de experiencias digitales',
                                     2000,
                                     'Apasionado por la tecnología',
                                     2000,
