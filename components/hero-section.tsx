@@ -68,30 +68,31 @@ export function HeroSection() {
                             Contáctame
                         </Link>
                     </div>
+                </div>
+            </div>
 
-                    {/* Scroll indicator */}
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                        <div className="flex flex-col items-center gap-2 text-muted-foreground">
-                            <span className="text-sm">Scroll para explorar</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="h-6 w-6"
-                            >
-                                <path d="M12 5v14" />
-                                <path d="m19 12-7 7-7-7" />
-                            </svg>
-                        </div>
-                    </div>
+            {/* Scroll indicator - positioned absolutely at bottom */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <div className="flex flex-col items-center gap-2 text-muted-foreground">
+                    <span className="text-sm">Scroll para explorar</span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-6 w-6"
+                    >
+                        <path d="M12 5v14" />
+                        <path d="m19 12-7 7-7-7" />
+                    </svg>
                 </div>
             </div>
         </section>
     )
 }
+```
