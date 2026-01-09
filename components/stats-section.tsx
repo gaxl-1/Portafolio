@@ -6,7 +6,7 @@ import CountUp from 'react-countup'
 
 const stats = [
     {
-        value: 4,
+        value: 6,
         label: 'Proyectos Completados',
         suffix: '+',
     },
@@ -16,7 +16,7 @@ const stats = [
         suffix: '+',
     },
     {
-        value: 2,
+        value: 4,
         label: 'Años de Experiencia',
         suffix: '+',
     },
