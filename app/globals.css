@@ -19,21 +19,21 @@
   --popover: 0 0% 2.5%;
   --popover-foreground: 0 0% 90%;
 
-  /* Primario - Púrpura Neón Moderno */
-  --primary: 270 80% 60%;
-  --primary-foreground: 0 0% 100%;
+  /* Primario - Blanco Puro (Alto Contraste) */
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
 
-  /* Secundario - Cyan Eléctrico */
-  --secondary: 190 90% 50%;
+  /* Secundario - Gris Medio */
+  --secondary: 0 0% 40%;
   --secondary-foreground: 0 0% 100%;
 
   /* Muted - Grises muy oscuros */
   --muted: 0 0% 12%;
   --muted-foreground: 0 0% 55%;
 
-  /* Accent - Rosa/Magenta Vibrante */
-  --accent: 320 80% 60%;
-  --accent-foreground: 0 0% 100%;
+  /* Accent - Gris Claro Plata */
+  --accent: 0 0% 70%;
+  --accent-foreground: 0 0% 0%;
 
   /* Destructive */
   --destructive: 0 75% 50%;
@@ -53,10 +53,10 @@
   --chart-4: 0 0% 20%;
   --chart-5: 0 80% 40%;
 
-  /* Gradientes Neón Modernos */
-  --gradient-1: linear-gradient(135deg, hsl(270, 80%, 60%) 0%, hsl(190, 90%, 50%) 100%);
-  --gradient-2: linear-gradient(135deg, hsl(190, 90%, 50%) 0%, hsl(320, 80%, 60%) 100%);
-  --gradient-3: linear-gradient(135deg, hsl(270, 80%, 60%) 0%, hsl(320, 80%, 60%) 100%);
+  /* Gradientes Monocromáticos */
+  --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 40%) 100%);
+  --gradient-2: linear-gradient(135deg, hsl(0, 0%, 40%) 0%, hsl(0, 0%, 70%) 100%);
+  --gradient-3: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 70%) 100%);
 }
 
 @theme inline {
@@ -92,10 +92,10 @@
   body {
     @apply bg-background text-foreground;
     background-image:
-      radial-gradient(at 0% 0%, hsl(270, 80%, 5%) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, hsl(190, 90%, 5%) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsl(320, 80%, 4%) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsl(270, 50%, 4%) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsl(0, 0%, 4%) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsl(0, 0%, 5%) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsl(0, 0%, 3%) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(0, 0%, 3%) 0px, transparent 50%);
     background-attachment: fixed;
   }
 
@@ -240,9 +240,8 @@
 
   .neon-glow {
     text-shadow:
-      0 0 10px hsl(var(--primary) / 0.4),
-      0 0 20px hsl(var(--primary) / 0.3),
-      0 0 30px hsl(var(--primary) / 0.2),
-      0 0 40px hsl(var(--secondary) / 0.15);
+      0 0 10px hsl(0, 0%, 100% / 0.5),
+      0 0 20px hsl(0, 0%, 100% / 0.3),
+      0 0 30px hsl(0, 0%, 100% / 0.1);
   }
 }
