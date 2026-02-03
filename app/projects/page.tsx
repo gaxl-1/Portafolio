@@ -7,28 +7,40 @@ import { ArrowUpRight } from "lucide-react"
  */
 const projects = [
     {
+        title: "Era Lemons v2",
+        description: "Nueva versión del sistema de gestión para la comunidad Era Lemons, con funcionalidades avanzadas y mejor estabilidad.",
+        link: "https://github.com/gaxl-1/era-lemons-v2",
+        tech: ["Kotlin", "Minecraft API", "Java"],
+    },
+    {
+        title: "Gestor de Tareas",
+        description: "Aplicación robusta para la gestión de tareas personales, permitiendo organizar el día a día con facilidad.",
+        link: "https://github.com/gaxl-1/Gestor_Tareas",
+        tech: ["Java", "Next.js", "MySQL"],
+    },
+    {
         title: "Sistema Bancario Web",
-        description: "Plataforma web para gestión de transacciones bancarias, simulando un entorno financiero real y seguro.",
+        description: "Plataforma web segura para transacciones bancarias, simulando operaciones financieras de la vida real.",
         link: "https://github.com/gaxl-1/sistema-bancario-web",
-        tech: ["Python", "Django", "Web"],
+        tech: ["Next.js", "Java", "PostgreSQL"],
     },
     {
         title: "BT Car Controller",
-        description: "Controlador para coche robot mediante Bluetooth. Integración de hardware y software para control remoto.",
+        description: "Sistema de control remoto para coche robot a través de Bluetooth e integración de hardware.",
         link: "https://github.com/gaxl-1/bt-car-controller",
-        tech: ["C++", "Arduino", "Bluetooth"],
-    },
-    {
-        title: "Compritas",
-        description: "Aplicación moderna para gestión de compras, listas inteligentes y seguimiento de gastos.",
-        link: "https://github.com/gaxl-1/Compritas",
-        tech: ["Mobile", "UX/UI", "App"],
+        tech: ["C++", "Arduino", "IoT"],
     },
     {
         title: "Coyotex",
-        description: "Proyecto innovador de desarrollo de software con enfoque en escalabilidad y rendimiento.",
+        description: "Framework innovador enfocado en el alto rendimiento y la escalabilidad de aplicaciones.",
         link: "https://github.com/gaxl-1/Coyotex",
-        tech: ["Software", "Dev", "Full Stack"],
+        tech: ["Full Stack", "Performance", "Software"],
+    },
+    {
+        title: "MindTrack",
+        description: "Herramienta avanzada para el seguimiento de la productividad y gestión mental de tareas complejos.",
+        link: "https://github.com/gaxl-1/MindTrack",
+        tech: ["Productivity", "Management", "App"],
     },
 ]
 

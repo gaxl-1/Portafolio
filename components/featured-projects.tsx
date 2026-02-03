@@ -6,31 +6,28 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
     {
+        title: "Era Lemons v2",
+        description: "Nueva versión del sistema de gestión para la comunidad Era Lemons, con funcionalidades avanzadas y mejor estabilidad.",
+        link: "https://github.com/gaxl-1/era-lemons-v2",
+        tech: ["Kotlin", "Minecraft API", "Java"],
+    },
+    {
+        title: "Gestor de Tareas",
+        description: "Aplicación robusta para la gestión de tareas personales, permitiendo organizar el día a día con facilidad.",
+        link: "https://github.com/gaxl-1/Gestor_Tareas",
+        tech: ["Java", "Next.js", "MySQL"],
+    },
+    {
         title: "Sistema Bancario Web",
-        description: "Plataforma web completa para gestión de transacciones bancarias con arquitectura segura y escalable.",
+        description: "Plataforma web segura para transacciones bancarias, simulando operaciones financieras de la vida real.",
         link: "https://github.com/gaxl-1/sistema-bancario-web",
-        tech: ["Python", "Django", "PostgreSQL"],
-        featured: true,
-    },
-    {
-        title: "Compritas",
-        description: "Aplicación móvil moderna para gestión de compras con listas inteligentes y seguimiento de gastos.",
-        link: "https://github.com/gaxl-1/Compritas",
-        tech: ["Mobile", "UX/UI", "App"],
-        featured: true,
-    },
-    {
-        title: "BT Car Controller",
-        description: "Sistema de control para coche robot mediante Bluetooth, integrando hardware y software.",
-        link: "https://github.com/gaxl-1/bt-car-controller",
-        tech: ["C++", "Arduino", "IoT"],
-        featured: true,
+        tech: ["Next.js", "Java", "PostgreSQL"],
     },
 ]
 
 export function FeaturedProjects() {
     return (
-        <section className="py-16 md:py-24 bg-secondary/30">
+        <section className="py-16 md:py-24">
             <div className="container px-4 md:px-8 max-w-screen-2xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -19,15 +19,24 @@ export function ContactForm() {
         event.preventDefault()
         setLoading(true)
 
-        // Simulate network request
-        await new Promise((resolve) => setTimeout(resolve, 1000))
+        try {
+            const formData = new FormData(event.currentTarget)
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                body: formData,
+            })
 
-        // TODO: Connect to backend API
-        // const formData = new FormData(event.currentTarget)
-        // const response = await fetch('/api/send', { method: 'POST', body: formData })
-
-        setLoading(false)
-        setSuccess(true)
+            if (response.ok) {
+                setSuccess(true)
+            } else {
+                const error = await response.json()
+                alert(`Error al enviar: ${error.message || 'Inténtalo de nuevo más tarde.'}`)
+            }
+        } catch (error) {
+            alert("Ocurrió un error inesperado. Por favor, revisa tu conexión.")
+        } finally {
+            setLoading(false)
+        }
     }
 
     if (success) {
