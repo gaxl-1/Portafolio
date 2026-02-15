@@ -35,7 +35,7 @@ export function Navbar() {
                 {/* Desktop Logo & Nav */}
                 <div className="mr-4 hidden md:flex">
                     <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <span className="hidden font-bold sm:inline-block gradient-text">Gael Dev</span>
+                        <span className="hidden font-bold sm:inline-block gradient-text uppercase tracking-tighter">Jairo Gael</span>
                     </Link>
                     <nav className="flex items-center gap-6 text-sm">
                         {navItems.map((item) => (
@@ -62,7 +62,7 @@ export function Navbar() {
                     >
                         {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     </button>
-                    <span className="font-bold gradient-text">Gael Dev</span>
+                    <span className="font-bold gradient-text uppercase tracking-tighter">Jairo Gael</span>
                 </div>
             </div>
 

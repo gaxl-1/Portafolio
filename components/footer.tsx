@@ -15,7 +15,7 @@ export function Footer() {
                 <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6 w-full md:w-auto">
                     <p className="text-center text-sm leading-loose text-muted-foreground md:text-left flex items-center gap-2">
                         Hecho con <Heart className="w-4 h-4 text-accent animate-pulse-glow inline-block" /> por{" "}
-                        <span className="font-bold gradient-text">Gael Dev</span>
+                        <span className="font-bold gradient-text">Jairo Gael</span>
                     </p>
                     <p className="text-xs text-muted-foreground/70">
                         © {new Date().getFullYear()} Todos los derechos reservados
