@@ -17,24 +17,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://gaeldevblog.vercel.app'),
   title: {
-    default: 'Gael Dev | Desarrollador Full-Stack',
-    template: '%s | Gael Dev'
+    default: 'Jairo Gael | Desarrollador Full-Stack',
+    template: '%s | Jairo Gael'
   },
   description: 'Portafolio profesional y blog de Jairo Gael Mota López. Desarrollador Full-Stack especializado en React, Next.js, Java, Kotlin y tecnologías modernas.',
-  keywords: ['Gael Dev', 'Desarrollador Full-Stack', 'React', 'Next.js', 'TypeScript', 'Java', 'Kotlin', 'Portfolio', 'Blog'],
+  keywords: ['Jairo Gael', 'Desarrollador Full-Stack', 'React', 'Next.js', 'TypeScript', 'Java', 'Kotlin', 'Portfolio', 'Blog'],
   authors: [{ name: 'Jairo Gael Mota López' }],
-  creator: 'Gael Dev',
+  creator: 'Jairo Gael',
   openGraph: {
     type: 'website',
     locale: 'es_MX',
     url: 'https://gaeldevblog.vercel.app',
-    title: 'Gael Dev | Desarrollador Full-Stack',
+    title: 'Jairo Gael | Desarrollador Full-Stack',
     description: 'Portafolio profesional y blog de desarrollo de software',
-    siteName: 'Gael Dev',
+    siteName: 'Jairo Gael',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gael Dev | Desarrollador Full-Stack',
+    title: 'Jairo Gael | Desarrollador Full-Stack',
     description: 'Portafolio profesional y blog de desarrollo de software',
     creator: '@gaxl_1',
   },

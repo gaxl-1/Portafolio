@@ -89,7 +89,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
                         url: `https://gael-dev-portfolio.vercel.app/blog/${slug}`,
                         author: {
                             "@type": "Person",
-                            name: "Gael Dev",
+                            name: "Jairo Gael",
                         },
                     }),
                 }}

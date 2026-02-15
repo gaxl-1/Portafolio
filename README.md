@@ -1,4 +1,4 @@
-# Gael Dev Portfolio v2.0 - Absolute Black Edition
+# Jairo Gael Portfolio v2.1 - Premium Edition
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC)
@@ -52,4 +52,4 @@ El proyecto está optimizado para **Vercel**:
 
 ---
 
-Rediseñado y potenciado con ❤️ por **Gael Dev**.
+Rediseñado y potenciado con ❤️ por **Jairo Gael**.
