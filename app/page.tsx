@@ -3,6 +3,8 @@ import { StatsSection } from "@/components/stats-section"
 import { RecentPosts } from "@/components/recent-posts"
 import { FeaturedProjects } from "@/components/featured-projects"
 import { TechStack } from "@/components/tech-stack"
+import { HighlightsSection } from "@/components/highlights-section"
+import { GithubStats } from "@/components/github-stats"
 import { getBlogPosts } from "@/lib/mdx"
 
 /**
@@ -26,7 +28,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <HeroSection />
+      <HighlightsSection />
       <StatsSection />
+      <GithubStats />
       <RecentPosts posts={allPosts} />
       <FeaturedProjects />
       <TechStack />

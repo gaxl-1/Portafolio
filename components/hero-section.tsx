@@ -42,11 +42,13 @@ export function HeroSection() {
                                 sequence={[
                                     'Desarrollador Full-Stack Multiplataforma',
                                     2000,
+                                    'Estudiante de Ingeniería',
+                                    2000,
+                                    'Enfocado en Arquitectura Escalable',
+                                    2000,
+                                    'Linux Enthusiast 🐧',
+                                    2000,
                                     'Creador de experiencias digitales',
-                                    2000,
-                                    'Apasionado por la tecnología',
-                                    2000,
-                                    'Constructor de soluciones robustas',
                                     2000,
                                 ]}
                                 wrapper="p"
@@ -58,11 +60,17 @@ export function HeroSection() {
                     </div>
 
                     {/* Description with shimmer effect */}
-                    <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl relative">
-                        Me apasiona construir soluciones robustas que conecten el backend
-                        con experiencias de usuario fluidas en web y móvil.
-                        <span className="absolute inset-0 shimmer pointer-events-none" />
-                    </p>
+                    <div className="space-y-6">
+                        <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl relative mx-auto">
+                            Apasionado Desarrollador Full-Stack enfocado en construir soluciones robustas
+                            que conecten el backend con experiencias de usuario fluidas en web y móvil.
+                            <span className="absolute inset-0 shimmer pointer-events-none" />
+                        </p>
+
+                        <blockquote className="italic text-muted-foreground/80 border-l-4 border-primary/50 pl-4 py-1 max-w-[500px] mx-auto text-sm md:text-base">
+                            "La tecnología es mejor cuando une a la gente." 🚀
+                        </blockquote>
+                    </div>
 
                     {/* CTA Buttons with enhanced effects */}
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
