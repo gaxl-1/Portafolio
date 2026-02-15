@@ -24,12 +24,12 @@ export function GithubStats() {
                         className="w-full flex flex-col md:flex-row justify-center gap-4"
                     >
                         <img
-                            src="https://github-readme-stats.vercel.app/api?username=gaxl-1&show_icons=true&theme=tokyonight&hide_border=false"
+                            src="https://github-readme-stats-fast.vercel.app/api?username=gaxl-1&show_icons=true&theme=tokyonight&hide_border=false"
                             alt="Estadísticas de Jairo"
                             className="h-auto md:h-48 rounded-lg shadow-xl hover:scale-[1.02] transition-transform"
                         />
                         <img
-                            src="https://github-readme-stats.vercel.app/api/top-langs/?username=gaxl-1&layout=compact&theme=tokyonight&hide_border=false"
+                            src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=gaxl-1&layout=compact&theme=tokyonight&hide_border=false"
                             alt="Lenguajes más usados"
                             className="h-auto md:h-48 rounded-lg shadow-xl hover:scale-[1.02] transition-transform"
                         />
