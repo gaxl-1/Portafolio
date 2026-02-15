@@ -1,55 +1,42 @@
-# Jairo Gael Portfolio v2.1 - Premium Edition
+# 🚀 Jairo Gael | Full-Stack Portfolio v2.1
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Resend](https://img.shields.io/badge/Resend-Connected-red)
+Este es mi portafolio profesional y blog personal. Una plataforma diseñada para la velocidad, el SEO y una experiencia de usuario inmersiva bajo una estética **Premium Dark Mode**.
 
-Nueva versión rediseñada del portafolio profesional y blog personal. Enfoque en **Negro Absoluto**, minimalismo técnico y alto contraste con Rojo Vino y Gris Plata.
+![Portfolio Preview](https://github-readme-stats-fast.vercel.app/api?username=gaxl-1&show_icons=true&theme=tokyonight)
 
-## 🚀 Tecnologías
+## �️ Stack Tecnológico
 
-Este sitio utiliza lo último en desarrollo web:
+| Capa | Tecnologías |
+| :--- | :--- |
+| **Frontend** | React 19, Next.js 16 (App Router), TypeScript, Framer Motion |
+| **Estilos** | Tailwind CSS v4, Glassmorphism, CSS Modules |
+| **Backend** | API Routes de Next.js, Resend API (Emails) |
+| **Infraestructura** | Vercel, Docker, Linux (Ubuntu/Pop!_OS) |
 
--   **[Next.js 16 (Turbopack)](https://nextjs.org/)**: Rendimiento extremo y App Router.
--   **[Tailwind CSS v4](https://tailwindcss.com/)**: Motor de diseño moderno y optimizado.
--   **[Resend API](https://resend.com/)**: Integración real para envíos de correo desde el formulario.
--   **[Framer Motion](https://www.framer.com/motion/)**: Animaciones de entrada, hover y scroll-triggered.
--   **[Lucide React](https://lucide.dev/)**: Pack de iconos vectorial y ligero.
+## ✨ Características Principales
 
-## 🌑 Diseño "Absolute Black"
+- **Diseño Responsive:** Optimizado para móviles, tablets y escritorio.
+- **Blog Dinámico:** Soporte para archivos MDX con sintaxis resaltada.
+- **Formulario de Contacto:** Integración real con Resend para entrega instantánea de emails.
+- **Performance:** Puntuaciones de 90+ en Lighthouse gracias a Turbopack.
+- **Animaciones:** Transiciones suaves de entrada y estados hover avanzados con Framer Motion.
 
-El portafolio ha sido rediseñado con una estética premium:
-- **Cero Distracciones**: Fondo negro casi puro (1.5% luminosidad).
-- **Contraste de Acento**: Uso exclusivo de **Rojo Vino** para elementos de acción.
-- **Minimalismo Industrial**: Grises técnicos para jerarquía visual.
-- **Glassmorphism**: Componentes con desenfoque de fondo y bordes ultra-sutiles.
+## 🚀 Instalación y Desarrollo
 
-## 🛠️ Configuración Necesaria
-
-Para que el formulario de contacto funcione, debes configurar tu API Key:
-
-1.  Copia el archivo `.env.example` a `.env.local`.
-2.  Obtén tu API Key gratuita en [Resend.com](https://resend.com).
-3.  Asigna el valor a `RESEND_API_KEY`.
-
-```bash
-# .env.local
-RESEND_API_KEY=re_tu_llave_aqui
-```
-
-## 📬 Formulario de Contacto
-
-El formulario en `/contact` está conectado al endpoint `/api/send`. Los mensajes se envían directamente a `lgael4885@gmail.com` mediante la infraestructura de Resend.
-
-## ☁️ Despliegue en Producción
-
-El proyecto está optimizado para **Vercel**:
-
-1.  Sube tus cambios a GitHub.
-2.  En el panel de Vercel, añade la variable de entorno `RESEND_API_KEY`.
-3.  El despliegue será automático.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/gaxl-1/Portafolio.git
+   ```
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+3. **Configurar el entorno:**
+   Crea un archivo `.env.local` y añade tu `RESEND_API_KEY`.
+4. **Ejecutar en modo de desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
 ---
-
-Rediseñado y potenciado con ❤️ por **Jairo Gael**.
+Diseñado con ❤️ por **Jairo Gael**.
