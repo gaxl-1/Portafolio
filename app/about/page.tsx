@@ -1,114 +1,136 @@
 import { SocialLinks } from "@/components/social-links"
 
 export const metadata = {
-    title: "Sobre Mí",
-    description: "Conoce más sobre Gael Dev.",
+    title: "Sobre Mí | Jairo Gael",
+    description: "Conoce más sobre Jairo Gael Mota Lopez, Desarrollador Full-Stack Multiplataforma.",
 }
 
-/**
- * Componente de la página Sobre Mí.
- *
- * Muestra información biográfica, habilidades actuales e intereses del desarrollador.
- * También incluye una sección de contacto breve.
- *
- * @returns {JSX.Element} La página 'Sobre Mí' renderizada.
- */
 export default function AboutPage() {
     return (
-        <section>
-            <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Sobre Mí</h1>
+        <section className="animate-fade-in space-y-12">
+            <div className="space-y-4">
+                <h1 className="font-bold text-3xl md:text-4xl tracking-tighter gradient-text">👋 ¡Hola! Soy Jairo Gael</h1>
+                <p className="text-xl text-muted-foreground font-medium">
+                    Desarrollador Full-Stack Multiplataforma | Estudiante de Ingeniería
+                </p>
+            </div>
+
             <div className="prose prose-neutral dark:prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                    Soy un apasionado <b>Desarrollador Full-Stack</b> enfocado en construir soluciones robustas
-                    que conecten el backend con experiencias de usuario fluidas en web y móvil.
-                    Me encanta enfrentar retos técnicos y aprender constantemente sobre nuevas infraestructuras.
-                    Además, soy estudiante de <b>Ingeniería en Tecnologías</b>.
+                    Soy un apasionado <b>Desarrollador Full-Stack</b> enfocado en construir soluciones robustas que conecten el backend con experiencias de usuario fluidas en web y móvil. Me encanta enfrentar retos técnicos, la arquitectura limpia y optimizar infraestructuras.
                 </p>
 
-                <hr className="my-8" />
+                <blockquote className="italic border-l-4 border-primary/50 pl-4 py-2 my-8 bg-muted/30 rounded-r-lg">
+                    "La tecnología es mejor cuando une a la gente." 🚀
+                </blockquote>
 
-                <h2 className="font-semibold text-xl mb-4">💻 Stack de Tecnologías</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <h3 className="font-medium mb-2">Backend</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                    <div className="space-y-4 p-6 glass-effect rounded-2xl border border-primary/10">
+                        <h2 className="text-xl font-bold flex items-center gap-2 m-0">
+                            🏗️ Arquitectura Escalable
+                        </h2>
+                        <p className="text-muted-foreground text-sm m-0">
+                            Enfocado en escribir código mantenible y eficiente, priorizando la escalabilidad a largo plazo.
+                        </p>
+                    </div>
+                    <div className="space-y-4 p-6 glass-effect rounded-2xl border border-primary/10">
+                        <h2 className="text-xl font-bold flex items-center gap-2 m-0">
+                            📱 Multiplataforma
+                        </h2>
+                        <p className="text-muted-foreground text-sm m-0">
+                            Capaz de llevar ideas desde la web hasta dispositivos móviles, asegurando coherencia y rendimiento.
+                        </p>
+                    </div>
+                    <div className="space-y-4 p-6 glass-effect rounded-2xl border border-primary/10">
+                        <h2 className="text-xl font-bold flex items-center gap-2 m-0">
+                            🐧 Linux Enthusiast
+                        </h2>
+                        <p className="text-muted-foreground text-sm m-0">
+                            Desarrollo en entornos basados en Unix para máxima eficiencia, seguridad y control total del entorno.
+                        </p>
+                    </div>
+                    <div className="space-y-4 p-6 glass-effect rounded-2xl border border-primary/10">
+                        <h2 className="text-xl font-bold flex items-center gap-2 m-0">
+                            🎨 Diseño & Código
+                        </h2>
+                        <p className="text-muted-foreground text-sm m-0">
+                            No solo programo, también diseño experiencias en Figma para entender mejor el flujo del usuario.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 className="text-2xl font-bold tracking-tighter my-8 pt-4 border-t">🛠️ Apilamiento Técnico</h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 NOT-PROSE">
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Lenguajes & Backend</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-                            <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
-                            <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" />
+                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white" alt="Java" />
+                            <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=flat&logo=kotlin&logoColor=white" alt="Kotlin" />
+                            <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black" alt="JS" />
+                            <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="TS" />
+                            <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=flat&logo=spring&logoColor=white" alt="Spring" />
                         </div>
                     </div>
-                    <div>
-                        <h3 className="font-medium mb-2">Frontend</h3>
+
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Frontend & Frameworks</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-                            <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-                            <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+                            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" alt="React" />
+                            <img src="https://img.shields.io/badge/Next-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js" />
+                            <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+                            <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=flat&logo=bootstrap&logoColor=white" alt="Bootstrap" />
                         </div>
                     </div>
-                    <div>
-                        <h3 className="font-medium mb-2">Móvil</h3>
+
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Móvil</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
-                            <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+                            <img src="https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white" alt="Android" />
+                            <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" alt="React Native" />
                         </div>
                     </div>
-                    <div>
-                        <h3 className="font-medium mb-2">Bases de Datos</h3>
+
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Infraestructura & Cloud</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-                            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-                            <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white" alt="Docker" />
+                            <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=flat&logo=kubernetes&logoColor=white" alt="K8s" />
+                            <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white" alt="Vercel" />
+                            <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
                         </div>
                     </div>
-                    <div>
-                        <h3 className="font-medium mb-2">Infraestructura</h3>
+
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Bases de Datos</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-                            <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+                            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white" alt="Postgres" />
+                            <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
+                            <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white" alt="MongoDB" />
                         </div>
                     </div>
-                    <div>
-                        <h3 className="font-medium mb-2">Herramientas</h3>
+
+                    <div className="space-y-3">
+                        <h3 className="text-sm font-bold uppercase tracking-widest text-primary/70">Diseño & Herramientas</h3>
                         <div className="flex flex-wrap gap-2">
-                            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-                            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-                            <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=trello&logoColor=white" alt="Trello" />
+                            <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white" alt="Figma" />
+                            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white" alt="Git" />
+                            <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=flat&logo=trello&logoColor=white" alt="Trello" />
                         </div>
                     </div>
                 </div>
 
-                <hr className="my-8" />
-
-                <h2 className="font-semibold text-xl mb-4">✨ Mis Intereses</h2>
-                <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 list-none pl-0">
-                    <li className="bg-secondary/50 p-4 rounded-lg text-center">
-                        <b>🛠️ Open Source</b>
-                        <br />
-                        <span className="text-sm text-muted-foreground">Contribuyendo a la comunidad.</span>
-                    </li>
-                    <li className="bg-secondary/50 p-4 rounded-lg text-center">
-                        <b>🤖 Automatización</b>
-                        <br />
-                        <span className="text-sm text-muted-foreground">Optimizando flujos de trabajo.</span>
-                    </li>
-                    <li className="bg-secondary/50 p-4 rounded-lg text-center">
-                        <b>🎮 Game Dev</b>
-                        <br />
-                        <span className="text-sm text-muted-foreground">Explorando lógica de videojuegos.</span>
-                    </li>
-                </ul>
-
-                <hr className="my-8" />
-
-                <h3 className="font-semibold text-xl mb-4">Contacto</h3>
-                <p>
-                    ¿Tienes un proyecto en mente? Me encantaría escucharlo.
-                    Puedes contactarme a través de mis redes sociales o enviarme un correo.
-                </p>
-                <div className="not-prose mt-6">
-                    <SocialLinks />
+                <div className="mt-16 pt-8 border-t">
+                    <h2 className="text-2xl font-bold tracking-tighter mb-4">¿Hablamos?</h2>
+                    <p className="text-muted-foreground">
+                        Siempre estoy abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones.
+                    </p>
+                    <div className="not-prose mt-8">
+                        <SocialLinks className="scale-110 origin-left" />
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
+
