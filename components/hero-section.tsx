@@ -7,107 +7,92 @@ import { ArrowRight } from "lucide-react"
 export function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Animated gradient background - ultra sutil */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 animate-gradient" />
+            {/* Background base - Negro Absoluto */}
+            <div className="absolute inset-0 bg-background" />
 
-            {/* Additional animated gradient overlay - ultra sutil */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-secondary/5 via-transparent to-accent/5 animate-gradient" style={{ animationDelay: '2s' }} />
-
-            {/* Floating particles effect - ultra sutiles */}
-            <div className="absolute inset-0">
-                <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float opacity-20" />
-                <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-secondary rounded-full animate-float opacity-15" style={{ animationDelay: '1s' }} />
-                <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-accent rounded-full animate-float opacity-20" style={{ animationDelay: '2s' }} />
-                <div className="absolute top-1/2 right-1/3 w-4 h-4 bg-primary rounded-full animate-float opacity-10" style={{ animationDelay: '3s' }} />
-                <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-secondary rounded-full animate-float opacity-15" style={{ animationDelay: '1.5s' }} />
-            </div>
-
-
+            {/* Subtle radial glow - para profundidad sin ruido */}
+            <div className="absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
             <div className="container relative z-10 px-4 md:px-8 max-w-screen-2xl mx-auto">
-                <div className="flex flex-col items-center text-center space-y-8">
-                    {/* Main heading with glow effect */}
-                    <div className="space-y-4">
-                        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl animate-fade-in">
+                <div className="flex flex-col items-center text-center space-y-10">
+                    {/* Badge de disponibilidad / Status */}
+                    <div className="animate-fade-in">
+                        <span className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold uppercase tracking-widest text-primary">
+                            Disponible para nuevos proyectos
+                        </span>
+                    </div>
+
+                    {/* Heading Principal */}
+                    <div className="space-y-6">
+                        <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl animate-fade-up">
                             Hola, soy{" "}
-                            <span className="gradient-text neon-glow inline-flex items-center gap-2">
-                                Gael
+                            <span className="gradient-text neon-glow">
+                                Jairo Gael
                             </span>{" "}
                             👋
                         </h1>
 
-                        {/* Typing animation */}
-                        <div className="h-12 md:h-16 flex items-center justify-center">
+                        {/* Typing animation - Enfoque Profesional */}
+                        <div className="h-10 flex items-center justify-center">
                             <TypeAnimation
                                 sequence={[
                                     'Full Stack Developer',
                                     2000,
                                     'Java & Spring Expert',
                                     2000,
-                                    'Mobile Developer (Native & React)',
-                                    2000,
                                     'AI Integration Enthusiast',
                                     2000,
-                                    'Linux & DevOps Focused',
+                                    'Cloud & Infrastructure',
                                     2000,
                                 ]}
                                 wrapper="p"
                                 speed={50}
-                                className="text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground"
+                                className="text-xl md:text-2xl font-medium text-muted-foreground tracking-tight"
                                 repeat={Infinity}
                             />
                         </div>
                     </div>
 
-                    {/* Description with shimmer effect */}
-                    <div className="space-y-6">
-                        <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl relative mx-auto">
-                            Apasionado por el desarrollo de software escalable y la arquitectura limpia.
-                            Experto en conectar backends potentes con interfaces modernas, integrando
-                            soluciones de Inteligencia Artificial y flujos de trabajo automatizados.
-                            <span className="absolute inset-0 shimmer pointer-events-none" />
+                    {/* Descripción con tipografía refinada */}
+                    <div className="space-y-8 max-w-3xl mx-auto">
+                        <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground font-light animate-fade-up" style={{ animationDelay: '0.2s' }}>
+                            Apasionado por el desarrollo de <b className="text-foreground">software escalable</b> y la arquitectura limpia. Experto en conectar backends potentes con interfaces modernas e Inteligencia Artificial.
                         </p>
+
+                        <div className="flex flex-wrap justify-center gap-3 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+                            {['Java', 'Spring', 'React', 'Python', 'AI', 'Cloud'].map((tech) => (
+                                <span
+                                    key={tech}
+                                    className="px-4 py-1.5 glass-effect rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20 text-muted-foreground hover:border-primary/50 transition-colors"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
-                    {/* CTA Buttons with enhanced effects */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    {/* Acciones principales */}
+                    <div className="flex flex-col sm:flex-row gap-4 pt-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
                         <Link
                             href="/projects"
-                            className="group relative inline-flex h-12 items-center justify-center rounded-lg bg-gradient-to-r from-primary to-secondary px-8 text-sm font-medium text-primary-foreground shadow-lg transition-all hover:shadow-2xl hover:scale-105 animate-glow overflow-hidden"
+                            className="group relative inline-flex h-12 items-center justify-center rounded-xl bg-foreground px-8 text-sm font-bold text-background transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                         >
-                            <span className="relative z-10 flex items-center">
-                                Ver mis proyectos
-                                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                            </span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            Ver Proyectos
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                         <Link
                             href="/contact"
-                            className="group relative inline-flex h-12 items-center justify-center rounded-lg glass-effect px-8 text-sm font-medium shadow-sm transition-all hover:scale-105 hover:shadow-lg border-2 border-primary/50 hover:border-primary"
+                            className="group relative inline-flex h-12 items-center justify-center rounded-xl glass-effect px-8 text-sm font-bold border border-primary/20 hover:border-primary/50 transition-all hover:scale-105 active:scale-95"
                         >
-                            <span className="gradient-text">Contáctame</span>
+                            <span className="gradient-text">Hablemos</span>
                         </Link>
-                    </div>
-
-                    {/* Tech badges */}
-                    <div className="flex flex-wrap gap-3 justify-center pt-8">
-                        {['React', 'Next.js', 'TypeScript', 'Java', 'Kotlin'].map((tech, index) => (
-                            <span
-                                key={tech}
-                                className="px-4 py-2 glass-effect rounded-full text-sm font-medium border border-primary/30 hover:border-primary transition-all hover:scale-110 cursor-default"
-                                style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                                {tech}
-                            </span>
-                        ))}
                     </div>
                 </div>
             </div>
 
             {/* Scroll indicator - positioned absolutely at bottom */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
                 <div className="flex flex-col items-center gap-2 text-muted-foreground">
-                    <span className="text-sm">Scroll para explorar</span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -128,4 +113,3 @@ export function HeroSection() {
         </section>
     )
 }
-
