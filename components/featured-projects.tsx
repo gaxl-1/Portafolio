@@ -6,22 +6,22 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
     {
-        title: "Era Lemons v2",
-        description: "Nueva versión del sistema de gestión para la comunidad Era Lemons, con funcionalidades avanzadas y mejor estabilidad.",
-        link: "https://github.com/gaxl-1/era-lemons-v2",
-        tech: ["Kotlin", "Minecraft API", "Java"],
-    },
-    {
-        title: "Gestor de Tareas",
-        description: "Aplicación robusta para la gestión de tareas personales, permitiendo organizar el día a día con facilidad.",
-        link: "https://github.com/gaxl-1/Gestor_Tareas",
-        tech: ["Java", "Next.js", "MySQL"],
+        title: "MindTrack",
+        description: "Sistema de gestión de salud mental y seguimiento emocional, diseñado para conectar pacientes con especialistas.",
+        link: "https://github.com/gaxl-1/MindTrack",
+        tech: ["Next.js", "Firebase", "Tailwind"],
     },
     {
         title: "Sistema Bancario Web",
-        description: "Plataforma web segura para transacciones bancarias, simulando operaciones financieras de la vida real.",
+        description: "Plataforma segura para transacciones bancarias simuladas, con enfoque en seguridad y arquitectura limpia.",
         link: "https://github.com/gaxl-1/sistema-bancario-web",
-        tech: ["Next.js", "Java", "PostgreSQL"],
+        tech: ["Java", "Spring Boot", "PostgreSQL"],
+    },
+    {
+        title: "BT Car Controller",
+        description: "Aplicación móvil para el control de vehículos mediante Bluetooth, integrando hardware y software.",
+        link: "https://github.com/gaxl-1/bt-car-controller",
+        tech: ["Java", "Android", "Bluetooth API"],
     },
 ]
 

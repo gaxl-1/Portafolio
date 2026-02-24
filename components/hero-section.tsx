@@ -16,8 +16,8 @@ export function HeroSection() {
             <div className="container relative z-10 px-4 md:px-8 max-w-screen-2xl mx-auto">
                 <div className="flex flex-col items-center text-center space-y-10">
                     {/* Badge de disponibilidad / Status */}
-                    <div className="animate-fade-in">
-                        <span className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold uppercase tracking-widest text-primary">
+                    <div className="animate-fade-in px-4">
+                        <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-primary whitespace-nowrap sm:whitespace-normal">
                             Disponible para nuevos proyectos
                         </span>
                     </div>
