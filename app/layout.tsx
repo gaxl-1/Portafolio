@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     default: 'Jairo Gael | Desarrollador Full-Stack',
     template: '%s | Jairo Gael'
   },
-  description: 'Portafolio profesional y blog de Jairo Gael Mota López. Desarrollador Full-Stack especializado en React, Next.js, Java, Kotlin y tecnologías modernas.',
-  keywords: ['Jairo Gael', 'Desarrollador Full-Stack', 'React', 'Next.js', 'TypeScript', 'Java', 'Kotlin', 'Portfolio', 'Blog'],
+  description: 'Portafolio profesional y blog de Jairo Gael Mota López. Software Engineer especializado en Full-Stack Multiplataforma, Cloud & Infraestructura e Inteligencia Artificial.',
+  keywords: ['Jairo Gael', 'Software Engineer', 'Full-Stack', 'Java', 'Spring', 'Python', 'AI Integration', 'DevOps', 'Cloud', 'React', 'Next.js'],
   authors: [{ name: 'Jairo Gael Mota López' }],
   creator: 'Jairo Gael',
   openGraph: {

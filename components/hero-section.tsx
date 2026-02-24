@@ -40,15 +40,15 @@ export function HeroSection() {
                         <div className="h-12 md:h-16 flex items-center justify-center">
                             <TypeAnimation
                                 sequence={[
-                                    'Desarrollador Full-Stack Multiplataforma',
+                                    'Full Stack Developer',
                                     2000,
-                                    'Estudiante de Ingeniería',
+                                    'Java & Spring Expert',
                                     2000,
-                                    'Enfocado en Arquitectura Escalable',
+                                    'Mobile Developer (Native & React)',
                                     2000,
-                                    'Linux Enthusiast 🐧',
+                                    'AI Integration Enthusiast',
                                     2000,
-                                    'Creador de experiencias digitales',
+                                    'Linux & DevOps Focused',
                                     2000,
                                 ]}
                                 wrapper="p"
@@ -62,14 +62,11 @@ export function HeroSection() {
                     {/* Description with shimmer effect */}
                     <div className="space-y-6">
                         <p className="max-w-[700px] text-lg text-muted-foreground md:text-xl relative mx-auto">
-                            Apasionado Desarrollador Full-Stack enfocado en construir soluciones robustas
-                            que conecten el backend con experiencias de usuario fluidas en web y móvil.
+                            Apasionado por el desarrollo de software escalable y la arquitectura limpia.
+                            Experto en conectar backends potentes con interfaces modernas, integrando
+                            soluciones de Inteligencia Artificial y flujos de trabajo automatizados.
                             <span className="absolute inset-0 shimmer pointer-events-none" />
                         </p>
-
-                        <blockquote className="italic text-muted-foreground/80 border-l-4 border-primary/50 pl-4 py-1 max-w-[500px] mx-auto text-sm md:text-base">
-                            "La tecnología es mejor cuando une a la gente." 🚀
-                        </blockquote>
                     </div>
 
                     {/* CTA Buttons with enhanced effects */}

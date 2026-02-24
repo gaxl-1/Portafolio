@@ -3,7 +3,7 @@ import { Layout, Smartphone, Terminal, Palette, GraduationCap, Globe, Rocket, Co
 
 export const metadata = {
     title: "Sobre Mí | Jairo Gael",
-    description: "Conoce más sobre Jairo Gael Mota Lopez, Desarrollador Full-Stack Multiplataforma.",
+    description: "Conoce más sobre Jairo Gael Mota Lopez, Software Engineer especializado en Full-Stack, Cloud e IA.",
 }
 
 export default function AboutPage() {
@@ -14,17 +14,17 @@ export default function AboutPage() {
                     👋 ¡Hola! Soy Jairo Gael
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl">
-                    Desarrollador Full-Stack Multiplataforma | Estudiante de Ingeniería
+                    Software Engineer | Full-Stack Multiplatform | Cloud & Infrastructure
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
                     <span className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-bold uppercase tracking-widest text-primary">
                         Full-Stack
                     </span>
-                    <span className="px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-xs font-bold uppercase tracking-widest text-green-500">
-                        Multiplataforma
+                    <span className="px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-bold uppercase tracking-widest text-cyan-500">
+                        Cloud & Infra
                     </span>
-                    <span className="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-bold uppercase tracking-widest text-blue-500">
-                        UX/UI Designer
+                    <span className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-bold uppercase tracking-widest text-purple-500">
+                        AI Enthusiast
                     </span>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                     <div className="lg:col-span-2 space-y-6">
                         <p className="text-xl leading-relaxed text-muted-foreground font-light">
-                            Soy un apasionado <b className="text-foreground">Desarrollador Full-Stack</b> enfocado en construir soluciones robustas que conecten el backend con experiencias de usuario fluidas en web y móvil. Me encanta enfrentar retos técnicos, la arquitectura limpia y optimizar infraestructuras.
+                            Apasionado por el desarrollo de <b className="text-foreground">software escalable</b> y la arquitectura limpia. Experto en conectar backends potentes con interfaces modernas, integrando soluciones de <b className="text-foreground">Inteligencia Artificial</b> y flujos de trabajo automatizados.
                         </p>
 
                         <blockquote className="italic border-l-4 border-primary/50 pl-6 py-4 my-8 bg-muted/20 rounded-r-2xl text-lg">
@@ -118,56 +118,59 @@ export default function AboutPage() {
                             <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Lenguajes & Backend</h3>
                             <div className="flex flex-wrap gap-2">
                                 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" className="h-7" />
-                                <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" className="h-7" />
-                                <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JS" className="h-7" />
-                                <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TS" className="h-7" />
                                 <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" className="h-7" />
+                                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" className="h-7" />
+                                <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JS" className="h-7" />
+                                <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP" className="h-7" />
                             </div>
                         </div>
 
                         <div className="space-y-4">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Frontend & Frameworks</h3>
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Frontend & Mobile</h3>
                             <div className="flex flex-wrap gap-2">
                                 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" className="h-7" />
                                 <img src="https://img.shields.io/badge/Next-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" className="h-7" />
                                 <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" className="h-7" />
-                                <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" className="h-7" />
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Móvil</h3>
-                            <div className="flex flex-wrap gap-2">
                                 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" className="h-7" />
-                                <img src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React Native" className="h-7" />
                             </div>
                         </div>
 
                         <div className="space-y-4">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Infraestructura & Cloud</h3>
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">AI & LLM Integration</h3>
+                            <div className="flex flex-wrap gap-2">
+                                <img src="https://img.shields.io/badge/Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini" className="h-7" />
+                                <img src="https://img.shields.io/badge/OpenAI-41100A?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" className="h-7" />
+                                <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" className="h-7" />
+                            </div>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Infraestructura & DevOps</h3>
                             <div className="flex flex-wrap gap-2">
                                 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" className="h-7" />
                                 <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="K8s" className="h-7" />
-                                <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" className="h-7" />
                                 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" className="h-7" />
+                                <img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash" className="h-7" />
                             </div>
                         </div>
 
                         <div className="space-y-4">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Bases de Datos</h3>
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Databases & Tools</h3>
                             <div className="flex flex-wrap gap-2">
                                 <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres" className="h-7" />
                                 <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" className="h-7" />
                                 <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" className="h-7" />
+                                <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase" className="h-7" />
                             </div>
                         </div>
 
                         <div className="space-y-4">
-                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Diseño & Herramientas</h3>
+                            <h3 className="text-xs font-bold uppercase tracking-widest text-primary/70">Build & Collaboration</h3>
                             <div className="flex flex-wrap gap-2">
-                                <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" className="h-7" />
-                                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" className="h-7" />
-                                <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=trello&logoColor=white" alt="Trello" className="h-7" />
+                                <img src="https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven" className="h-7" />
+                                <img src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white" alt="Gradle" className="h-7" />
+                                <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" className="h-7" />
+                                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" className="h-7" />
                             </div>
                         </div>
                     </div>
