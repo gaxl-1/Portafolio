@@ -1,4 +1,4 @@
-import { SocialLinks } from "@/components/social-links"
+import { SocialLinks } from "@/components/shared/social-links"
 import { Layout, Smartphone, Terminal, Palette, GraduationCap, Globe, Rocket, Code2 } from 'lucide-react'
 
 export const metadata = {

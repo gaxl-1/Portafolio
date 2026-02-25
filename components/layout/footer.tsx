@@ -1,4 +1,4 @@
-import { SocialLinks } from "@/components/social-links"
+import { SocialLinks } from "@/components/shared/social-links"
 import { Heart } from "lucide-react"
 
 /**
@@ -28,4 +28,3 @@ export function Footer() {
         </footer>
     )
 }
-

@@ -1,5 +1,5 @@
-import { ContactForm } from "@/components/contact-form"
-import { SocialLinks } from "@/components/social-links"
+import { ContactForm } from "@/components/forms/contact-form"
+import { SocialLinks } from "@/components/shared/social-links"
 
 export const metadata = {
     title: "Contacto",

@@ -1,10 +1,10 @@
-import { HeroSection } from "@/components/hero-section"
-import { StatsSection } from "@/components/stats-section"
-import { RecentPosts } from "@/components/recent-posts"
-import { FeaturedProjects } from "@/components/featured-projects"
-import { TechStack } from "@/components/tech-stack"
-import { HighlightsSection } from "@/components/highlights-section"
-import { GithubStats } from "@/components/github-stats"
+import { HeroSection } from "@/components/sections/hero-section"
+import { StatsSection } from "@/components/sections/stats-section"
+import { RecentPosts } from "@/components/sections/recent-posts"
+import { FeaturedProjects } from "@/components/sections/featured-projects"
+import { TechStack } from "@/components/sections/tech-stack"
+import { HighlightsSection } from "@/components/sections/highlights-section"
+import { GithubStats } from "@/components/sections/github-stats"
 import { getBlogPosts } from "@/lib/mdx"
 
 /**
