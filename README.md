@@ -83,3 +83,6 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 <div align="center">
   Hecho con ❤️ por <a href="https://github.com/gaxl-1">Jairo Gael</a>
 </div>
+
+---
+_Last maintained: March 2026_
