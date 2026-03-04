@@ -1,4 +1,4 @@
-# 🚀 Jairo Gael | Portfolio Profesional
+# 🚀 🚀 Jairo Gael | Portfolio Profesional
 
 Bienvenido al repositorio de mi portafolio personal y blog. Esta es una aplicación web moderna construida con **Next.js 15+**, **React 19** y **Tailwind CSS**, diseñada para mostrar mis proyectos, habilidades y compartir conocimiento a través de un blog integrado.
 
@@ -6,7 +6,7 @@ Bienvenido al repositorio de mi portafolio personal y blog. Esta es una aplicaci
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;Java+%26+Spring+Expert;Cloud+%26+Infrastructure;AI+Integration+Enthusiast" />
 </p>
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 🛠️ Tecnologías Utilizadas
 
 - **Core:** [Next.js](https://nextjs.org/) (App Router), React, TypeScript.
 - **Estilos:** Tailwind CSS, Framer Motion (Animaciones), Lucide React (Iconos).
@@ -14,7 +14,7 @@ Bienvenido al repositorio de mi portafolio personal y blog. Esta es una aplicaci
 - **Servicios:** [Resend](https://resend.com/) para el formulario de contacto.
 - **Despliegue:** Vercel.
 
-## 📁 Estructura del Proyecto
+## 🚀 📁 Estructura del Proyecto
 
 El proyecto sigue una estructura profesional y organizada:
 
@@ -30,11 +30,11 @@ El proyecto sigue una estructura profesional y organizada:
 - `lib/`: Utilidades, helpers y lógica de procesamiento de MDX.
 - `public/`: Assets estáticos.
 
-## 🛡️ Seguridad y Configuración
+## 🚀 🛡️ Seguridad y Configuración
 
 El proyecto utiliza variables de entorno para proteger información sensible. **Nunca** compartas tu archivo `.env.local` ni lo subas a un repositorio público.
 
-### Variables de Entorno Requeridas
+### 🚀 Variables de Entorno Requeridas
 
 Copia el archivo `.env.example` a `.env.local` y configura las siguientes llaves:
 
@@ -45,7 +45,7 @@ RESEND_API_KEY=tu_api_key_de_resend
 > [!IMPORTANT]
 > Si alguna vez has expuesto accidentalmente una API Key en un commit público, debes **rotarla inmediatamente** en el panel de control del servicio correspondiente y purgar el historial de Git si es necesario.
 
-## 🚀 Instalación y Desarrollo
+## 🚀 🚀 Instalación y Desarrollo
 
 1. **Clonar el repositorio:**
    ```bash
@@ -61,7 +61,7 @@ RESEND_API_KEY=tu_api_key_de_resend
 3. **Configurar el entorno:**
    ```bash
    cp .env.example .env.local
-   # Edita .env.local con tus llaves
+   # 🚀 Edita .env.local con tus llaves
    ```
 
 4. **Ejecutar en modo desarrollo:**
@@ -74,7 +74,7 @@ RESEND_API_KEY=tu_api_key_de_resend
    npm run build
    ```
 
-## 📄 Licencia
+## 🚀 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
