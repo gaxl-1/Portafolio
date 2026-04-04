@@ -9,7 +9,7 @@ import { Metadata } from "next"
  * Esto permite que Next.js pre-renderice todas las páginas del blog (SSG).
  */
 export async function generateStaticParams() {
-    let posts = getBlogPosts()
+    const posts = getBlogPosts()
     return posts.map((post) => ({
         slug: post.slug,
     }))
@@ -17,17 +17,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata | undefined> {
     const { slug } = await params
-    let post = getBlogPosts().find((post) => post.slug === slug)
+    const post = getBlogPosts().find((post) => post.slug === slug)
     if (!post) {
         return
     }
-    let {
+    const {
         title,
         publishedAt: publishedTime,
         summary: description,
         image,
     } = post.metadata
-    let ogImage = image ? image : "https://gael-dev-portfolio.vercel.app/og?title=" + encodeURIComponent(title)
+    const ogImage = image ? image : "https://gael-dev-portfolio.vercel.app/og?title=" + encodeURIComponent(title)
 
     return {
         title,
@@ -64,14 +64,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
  */
 export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    let post = getBlogPosts().find((post) => post.slug === slug)
+    const post = getBlogPosts().find((post) => post.slug === slug)
 
     if (!post) {
         notFound()
     }
 
     return (
-        <section>
+        <section className="pt-32 pb-24 px-6 md:px-12 max-w-4xl mx-auto">
             <script
                 type="application/ld+json"
                 suppressHydrationWarning
@@ -142,7 +142,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
                     {formatDate(post.metadata.publishedAt)}
                 </div>
             </div>
-            <article className="prose prose-neutral dark:prose-invert">
+            <article className="prose prose-neutral dark:prose-invert max-w-none prose-p:text-gray-200 prose-headings:text-white prose-strong:text-white prose-a:text-[#ff0000] marker:text-[#ff0000] prose-li:text-gray-200 text-lg">
                 <CustomMDX source={post.content} />
             </article>
         </section>

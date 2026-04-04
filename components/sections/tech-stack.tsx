@@ -1,93 +1,100 @@
 "use client"
 
 import { motion } from 'framer-motion'
+import { Terminal, Shield, Globe, Cpu, Database, Layout } from 'lucide-react'
 
-const technologies = [
-    // Lenguajes & Backend
-    { name: "Java", badge: "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" },
-    { name: "Python", badge: "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" },
-    { name: "PHP", badge: "https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" },
-    { name: "JavaScript", badge: "https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" },
-    { name: "TypeScript", badge: "https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" },
-    { name: "Spring", badge: "https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" },
-
-    // Frontend & Frameworks
-    { name: "React", badge: "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" },
-    { name: "Next.js", badge: "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" },
-    { name: "TailwindCSS", badge: "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" },
-    { name: "Bootstrap", badge: "https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" },
-
-    // AI & LLM
-    { name: "OpenAI", badge: "https://img.shields.io/badge/OpenAI-41100A?style=for-the-badge&logo=openai&logoColor=white" },
-    { name: "Gemini", badge: "https://img.shields.io/badge/Gemini-8E75C2?style=for-the-badge&logo=googlegemini&logoColor=white" },
-    { name: "Claude", badge: "https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white" },
-
-    // Móvil
-    { name: "Android", badge: "https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" },
-    { name: "React Native", badge: "https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" },
-
-    // Infraestructura & Cloud
-    { name: "Docker", badge: "https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" },
-    { name: "Kubernetes", badge: "https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" },
-    { name: "Linux", badge: "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" },
-    { name: "Bash", badge: "https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" },
-
-    // Bases de Datos
-    { name: "PostgreSQL", badge: "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" },
-    { name: "MySQL", badge: "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" },
-    { name: "MongoDB", badge: "https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" },
-    { name: "Firebase", badge: "https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" },
-
-    // Diseño & Herramientas
-    { name: "Git", badge: "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" },
-    { name: "GitHub", badge: "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" },
-    { name: "GitLab", badge: "https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white" },
-    { name: "Maven", badge: "https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" },
-    { name: "Gradle", badge: "https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white" },
-    { name: "Postman", badge: "https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" },
-    { name: "Figma", badge: "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" },
+const categories = [
+    {
+        name: "Backend & Languages",
+        icon: <Cpu className="w-4 h-4" />,
+        color: "#ff0000",
+        tech: ["Java", "Spring Boot", "Python", "PHP", "Node.js", "TypeScript"]
+    },
+    {
+        name: "Frontend & UI",
+        icon: <Layout className="w-4 h-4" />,
+        color: "#00f3ff",
+        tech: ["React", "Next.js", "TailwindCSS", "Framer Motion", "Figma"]
+    },
+    {
+        name: "Infrastructure & Security",
+        icon: <Shield className="w-4 h-4" />,
+        color: "#ff0000",
+        tech: ["Linux", "Bash", "Docker", "Kubernetes", "Git", "Security Auditor"]
+    },
+    {
+        name: "Data & Cloud",
+        icon: <Database className="w-4 h-4" />,
+        color: "#ffffff",
+        tech: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "AWS"]
+    }
 ]
 
 export function TechStack() {
     return (
-        <section className="py-16 md:py-24">
-            <div className="container px-4 md:px-8 max-w-screen-2xl mx-auto">
+        <section className="py-24 relative overflow-hidden" id="stack">
+            <div className="container px-6 md:px-12 max-w-6xl mx-auto relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="space-y-8"
+                    className="space-y-16"
                 >
-                    <div className="text-center">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                            Stack Tecnológico
+                    <div className="text-center space-y-4">
+                        <div className="inline-flex items-center gap-2 text-[#00f3ff] font-mono text-xs uppercase tracking-[0.3em]">
+                            <Terminal className="w-4 h-4" />
+                            <span>sysinfo --components</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-white">
+                            STACK <span className="text-[#00f3ff]">TECNOLÓGICO</span>
                         </h2>
-                        <p className="text-muted-foreground mt-2">
-                            Tecnologías con las que trabajo día a día
+                        <p className="text-gray-400 font-mono text-sm max-w-2xl mx-auto">
+                            Herramientas y lenguajes utilizados para construir sistemas de alta disponibilidad y código seguro.
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {technologies.map((tech, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {categories.map((cat, idx) => (
                             <motion.div
-                                key={tech.name}
-                                initial={{ opacity: 0, scale: 0.8 }}
+                                key={cat.name}
+                                initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
                                 viewport={{ once: true }}
-                                whileHover={{
-                                    scale: 1.1,
-                                    rotate: [0, -5, 5, 0],
-                                    transition: { duration: 0.3 }
-                                }}
-                                className="cursor-pointer"
+                                className="group p-6 bg-black/40 border border-gray-900 hover:border-gray-700 transition-all relative overflow-hidden"
                             >
-                                <img
-                                    src={tech.badge}
-                                    alt={tech.name}
-                                    className="h-8 transition-all hover:shadow-lg"
+                                {/* Glow Accent */}
+                                <div 
+                                    className="absolute top-0 left-0 w-1 h-full opacity-50 group-hover:opacity-100 transition-opacity" 
+                                    style={{ backgroundColor: cat.color, boxShadow: `0 0 15px ${cat.color}` }} 
                                 />
+
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="p-2 bg-gray-900 text-white rounded">
+                                        {cat.icon}
+                                    </div>
+                                    <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-white">
+                                        {cat.name}
+                                    </h3>
+                                </div>
+
+                                <div className="flex flex-wrap gap-2">
+                                    {cat.tech.map((t) => (
+                                        <span
+                                            key={t}
+                                            className="px-3 py-1 bg-black/60 border border-gray-800 rounded-sm text-[10px] font-mono text-gray-400 hover:text-white hover:border-gray-600 transition-all cursor-default"
+                                        >
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Background decoration */}
+                                <div className="absolute -bottom-4 -right-4 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity">
+                                    {cat.icon}
+                                    <div className="w-24 h-24" />
+                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -96,3 +103,4 @@ export function TechStack() {
         </section>
     )
 }
+

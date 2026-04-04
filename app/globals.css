@@ -8,55 +8,41 @@
 }
 
 /* Modo oscuro permanente - Negro Absoluto Elegante */
+/* Hackerspace Theme */
 :root {
-  /* Fondo casi negro total */
-  --background: 0 0% 1.5%;
-  --foreground: 0 0% 90%;
+  --background: 240 10% 4%; /* #0a0a0a */
+  --foreground: 0 0% 100%;
+  
+  --neon-green: 0 100% 50%; /* #ff0000 */
+  --neon-red: 0 100% 50%; /* #ff0000 */
+  --neon-cyan: 183 100% 50%; /* #00f3ff */
+  
+  --primary: 0 100% 50%;
+  --primary-foreground: 0 100% 5%;
+  
+  --secondary: 0 100% 50%;
+  --secondary-foreground: 0 100% 5%;
+  
+  --accent: 183 100% 50%;
+  --accent-foreground: 183 100% 5%;
 
-  /* Cards y Popovers casi invisibles */
-  --card: 0 0% 3%;
-  --card-foreground: 0 0% 90%;
-  --popover: 0 0% 2.5%;
-  --popover-foreground: 0 0% 90%;
-
-  /* Primario - Blanco Puro (Alto Contraste) */
-  --primary: 0 0% 100%;
-  --primary-foreground: 0 0% 0%;
-
-  /* Secundario - Gris Medio */
-  --secondary: 0 0% 40%;
-  --secondary-foreground: 0 0% 100%;
-
-  /* Muted - Grises muy oscuros */
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 55%;
-
-  /* Accent - Gris Claro Plata */
-  --accent: 0 0% 70%;
-  --accent-foreground: 0 0% 0%;
-
-  /* Destructive */
-  --destructive: 0 75% 50%;
-  --destructive-foreground: 0 0% 98%;
-
-  /* Borders ultra sutiles */
-  --border: 0 0% 10%;
-  --input: 0 0% 8%;
-  --ring: 0 65% 45%;
-
-  --radius: 0.75rem;
-
-  /* Charts con paleta minimalista */
-  --chart-1: 0 65% 45%;
-  --chart-2: 0 0% 30%;
-  --chart-3: 0 0% 50%;
-  --chart-4: 0 0% 20%;
-  --chart-5: 0 80% 40%;
-
-  /* Gradientes Monocromáticos */
-  --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 40%) 100%);
-  --gradient-2: linear-gradient(135deg, hsl(0, 0%, 40%) 0%, hsl(0, 0%, 70%) 100%);
-  --gradient-3: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 70%) 100%);
+  --card: 240 10% 5%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 240 10% 5%;
+  --popover-foreground: 0 0% 100%;
+  
+  --muted: 240 5% 15%;
+  --muted-foreground: 0 0% 60%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 0 100% 50%;
+  
+  --radius: 0.2rem; /* Sharper edges for hacker look */
 }
 
 @theme inline {
@@ -79,9 +65,12 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --color-neon-green: hsl(var(--neon-green));
+  --color-neon-red: hsl(var(--neon-red));
+  --color-neon-cyan: hsl(var(--neon-cyan));
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: calc(var(--radius));
+  --radius-lg: calc(var(--radius) + 2px);
 }
 
 @layer base {
@@ -91,32 +80,36 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image:
-      radial-gradient(at 0% 0%, hsl(0, 0%, 4%) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, hsl(0, 0%, 5%) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsl(0, 0%, 3%) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsl(0, 0%, 3%) 0px, transparent 50%);
-    background-attachment: fixed;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
 
-  /* Scrollbar personalizado */
+  /* Custom Selection */
+  ::selection {
+    background: hsl(var(--neon-green) / 0.3);
+    color: hsl(var(--neon-green));
+  }
+
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: #000;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
-    border-radius: 5px;
+    background: #111;
+    border: 1px solid #222;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--primary)));
+    background: hsl(var(--neon-green));
+    box-shadow: 0 0 10px hsl(var(--neon-green));
   }
 }
+
 
 /* Animaciones personalizadas */
 @keyframes gradient-shift {
@@ -192,8 +185,18 @@
     animation: glow 3s ease-in-out infinite;
   }
 
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
   }
 
   .glass-effect {
@@ -203,7 +206,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+    background: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--neon-cyan)), hsl(var(--neon-red)));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,37 +214,26 @@
     animation: gradient-shift 5s ease infinite;
   }
 
-  .gradient-border {
-    position: relative;
-    background: hsl(var(--card));
-    border-radius: var(--radius-lg);
-  }
-
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: var(--radius-lg);
-    padding: 2px;
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-
-  .shimmer {
-    background: linear-gradient(90deg,
-        transparent,
-        hsl(var(--primary) / 0.1),
-        transparent);
-    background-size: 1000px 100%;
-    animation: shimmer 3s infinite;
-  }
-
   .neon-glow {
     text-shadow:
-      0 0 10px hsl(0, 0%, 100% / 0.5),
-      0 0 20px hsl(0, 0%, 100% / 0.3),
-      0 0 30px hsl(0, 0%, 100% / 0.1);
+      0 0 10px hsl(var(--neon-green) / 0.5),
+      0 0 20px hsl(var(--neon-green) / 0.3),
+      0 0 30px hsl(var(--neon-green) / 0.1);
+  }
+
+  .scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 10s linear infinite;
+  }
+
+  @keyframes scanline {
+    0% { bottom: 100%; }
+    100% { bottom: -100%; }
   }
 }

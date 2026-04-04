@@ -1,54 +1,45 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { MatrixBackground } from "@/components/ui/matrix-background";
+import { SecurityModal } from "@/components/ui/security-modal";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gaeldevblog.vercel.app'),
   title: {
-    default: 'Jairo Gael | Desarrollador Full-Stack',
+    default: 'Jairo Gael | Desarrollador Full-Stack & Cyber Enthusiast',
     template: '%s | Jairo Gael'
   },
-  description: 'Portafolio profesional y blog de Jairo Gael Mota López. Software Engineer especializado en Full-Stack Multiplataforma, Cloud & Infraestructura e Inteligencia Artificial.',
-  keywords: ['Jairo Gael', 'Software Engineer', 'Full-Stack', 'Java', 'Spring', 'Python', 'AI Integration', 'DevOps', 'Cloud', 'React', 'Next.js'],
+  description: 'Software Engineer & Ciberseguridad. Ningún sistema es invencible. Especialista en Arquitectura escalable, Linux y Secure Code.',
+  keywords: ['Jairo Gael', 'Hacker', 'Cybersecurity', 'Full-Stack', 'Linux', 'Ethical Hacking', 'Secure Code'],
   authors: [{ name: 'Jairo Gael Mota López' }],
   creator: 'Jairo Gael',
   openGraph: {
     type: 'website',
     locale: 'es_MX',
     url: 'https://gaeldevblog.vercel.app',
-    title: 'Jairo Gael | Desarrollador Full-Stack',
-    description: 'Portafolio profesional y blog de desarrollo de software',
+    title: 'Jairo Gael | Full-Stack & Cyber Enthusiast',
+    description: 'Ningún sistema es invencible. Portafolio de Ciberseguridad y Desarrollo.',
     siteName: 'Jairo Gael',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jairo Gael | Desarrollador Full-Stack',
-    description: 'Portafolio profesional y blog de desarrollo de software',
+    title: 'Jairo Gael | Full-Stack & Cyber Enthusiast',
+    description: 'Ningún sistema es invencible.',
     creator: '@gaxl_1',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 };
 
@@ -60,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased min-h-screen bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
@@ -68,9 +59,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
+          <SecurityModal />
+          <div className="relative flex min-h-screen flex-col overflow-hidden">
+            <MatrixBackground />
+            
+            {/* Scanlines Effect Overlay */}
+            <div className="fixed inset-0 pointer-events-none z-[50] opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]" />
+            
             <Navbar />
-            <main className="flex-1 max-w-screen-2xl mx-auto w-full px-4 md:px-8 py-6">
+            <main className="flex-1 w-full z-10">
               {children}
             </main>
             <Footer />
@@ -80,4 +77,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

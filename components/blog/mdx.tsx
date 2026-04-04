@@ -1,16 +1,24 @@
 import Link from "next/link"
 import Image from "next/image"
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import { highlight } from "sugar-high"
 import React from "react"
+import { cn } from "@/lib/utils"
 
-function Table({ data }: { data: any }) {
-    let headers = data.headers.map((header: any) => (
+interface TableProps {
+    data: {
+        headers: string[]
+        rows: string[][]
+    }
+}
+
+function Table({ data }: TableProps) {
+    const headers = data.headers.map((header) => (
         <th key={header}>{header}</th>
     ))
-    let rows = data.rows.map((row: any, index: any) => (
+    const rows = data.rows.map((row, index) => (
         <tr key={index}>
-            {row.map((cell: any, cellIndex: any) => (
+            {row.map((cell, cellIndex) => (
                 <td key={cellIndex}>{cell}</td>
             ))}
         </tr>
@@ -26,34 +34,50 @@ function Table({ data }: { data: any }) {
     )
 }
 
-function CustomLink(props: any) {
-    let href = props.href
+interface CustomLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+    href: string
+}
 
+function CustomLink({ href, children, ...props }: CustomLinkProps) {
     if (href.startsWith("/")) {
         return (
             <Link href={href} {...props}>
-                {props.children}
+                {children}
             </Link>
         )
     }
 
     if (href.startsWith("#")) {
-        return <a {...props} />
+        return <a href={href} {...props}>{children}</a>
     }
 
-    return <a target="_blank" rel="noopener noreferrer" {...props} />
+    return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>
 }
 
-function RoundedImage(props: any) {
-    return <Image alt={props.alt} className="rounded-lg" {...props} />
+interface RoundedImageProps extends React.ComponentProps<typeof Image> {
+    alt: string
+}
+
+function RoundedImage({ alt, className, ...props }: RoundedImageProps) {
+    return (
+        <Image
+            alt={alt}
+            className={cn("rounded-lg", className)}
+            {...props}
+        />
+    )
 }
 
 function Grid({ children }: { children: React.ReactNode }) {
     return <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{children}</div>
 }
 
-function Code({ children, ...props }: any) {
-    let codeHTML = highlight(children)
+interface CodeProps extends React.HTMLAttributes<HTMLElement> {
+    children: string
+}
+
+function Code({ children, ...props }: CodeProps) {
+    const codeHTML = highlight(children)
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
@@ -69,8 +93,8 @@ function slugify(str: string) {
 }
 
 function createHeading(level: number) {
-    const Heading = ({ children }: any) => {
-        let slug = slugify(children)
+    const Heading = ({ children }: { children: string }) => {
+        const slug = slugify(children)
         return React.createElement(
             `h${level}`,
             { id: slug },
@@ -90,7 +114,7 @@ function createHeading(level: number) {
     return Heading
 }
 
-let components = {
+const components = {
     h1: createHeading(1),
     h2: createHeading(2),
     h3: createHeading(3),
@@ -110,10 +134,10 @@ let components = {
  * Utiliza `next-mdx-remote` para interpretar strings MDX y convertirlos a componentes React.
  * Inyecta los componentes personalizados definidos en `components`.
  *
- * @param {object} props - Propiedades del componente MDXRemote.
+ * @param {MDXRemoteProps} props - Propiedades del componente MDXRemote.
  * @returns {JSX.Element} Contenido MDX renderizado.
  */
-export function CustomMDX(props: any) {
+export function CustomMDX(props: MDXRemoteProps) {
     return (
         <MDXRemote
             {...props}

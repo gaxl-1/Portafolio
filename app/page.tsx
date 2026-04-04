@@ -2,9 +2,9 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { StatsSection } from "@/components/sections/stats-section"
 import { RecentPosts } from "@/components/sections/recent-posts"
 import { FeaturedProjects } from "@/components/sections/featured-projects"
-import { TechStack } from "@/components/sections/tech-stack"
 import { HighlightsSection } from "@/components/sections/highlights-section"
 import { GithubStats } from "@/components/sections/github-stats"
+import { ContactSection } from "@/components/sections/contact-section"
 import { getBlogPosts } from "@/lib/mdx"
 
 /**
@@ -33,7 +33,8 @@ export default function Home() {
       <GithubStats />
       <RecentPosts posts={allPosts} />
       <FeaturedProjects />
-      <TechStack />
+      <ContactSection />
     </main>
   )
 }
+
