@@ -76,7 +76,9 @@ RESEND_API_KEY=tu_api_key_de_resend
 
 ## 🚀 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto **NO es de código abierto (Open Source)**. Todos los derechos están reservados (All Rights Reserved). 
+
+Por favor consulta el archivo [LICENSE](LICENSE) antes de proseguir. NO se permite copiar, modificar, recrear, ni distribuir el código fuente, la identidad visual o diseño de este portafolio para tus propios fines sin autorización previa y por escrito.
 
 ---
 

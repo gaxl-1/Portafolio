@@ -29,33 +29,33 @@ export function HeroSection() {
                             Ningún sistema es <GlitchText text="invencible" className="text-[#ff0000] italic" />
                         </div>
 
-                        <p className="max-w-xl text-gray-400 text-lg leading-relaxed font-mono">
+                        <p className="max-w-xl text-gray-400 text-sm md:text-lg leading-relaxed font-mono break-words">
                             “Desarrollador Full-Stack | Arquitectura escalable | Linux enthusiast | Empezando en Hacking Ético y Ciberseguridad”
                         </p>
                     </div>
 
                     {/* Terminal Command Widget */}
-                    <div className="group relative w-fit">
+                    <div className="group relative w-fit max-w-full">
                         <div className="absolute -inset-1 bg-gradient-to-r from-[#ff0000] to-[#00f3ff] rounded blur opacity-20 group-hover:opacity-40 transition" />
-                        <div className="relative flex items-center gap-3 px-6 py-3 bg-black border border-gray-800 rounded font-mono shadow-2xl">
+                        <div className="relative flex items-center gap-2 md:gap-3 px-3 md:px-6 py-3 bg-black border border-gray-800 rounded font-mono shadow-2xl text-[10px] sm:text-sm md:text-base overflow-hidden">
                              <span className="text-[#ff0000]">{">"}</span>
                              <span className="text-gray-300">jairo@gaeldev:~$</span>
                              <span className="text-[#00f3ff]">./portfolio.sh</span>
-                             <span className="w-2 h-5 bg-[#ff0000] animate-pulse" />
+                             <span className="w-1.5 md:w-2 h-4 md:h-5 bg-[#ff0000] animate-pulse" />
                         </div>
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 w-full">
                         <Link
                             href="/projects"
-                            className="px-8 py-4 bg-[#ff0000] text-black font-black uppercase tracking-widest text-sm hover:translate-y-[-2px] hover:shadow-[0_0_25px_#ff0000] transition-all"
+                            className="w-full sm:w-auto text-center px-8 py-4 bg-[#ff0000] text-black font-black uppercase tracking-widest text-sm hover:translate-y-[-2px] hover:shadow-[0_0_25px_#ff0000] transition-all"
                         >
                             Ver mis proyectos
                         </Link>
                         <Link
                             href="/blog"
-                            className="px-8 py-4 bg-transparent border-2 border-[#00f3ff] text-[#00f3ff] font-black uppercase tracking-widest text-sm hover:bg-[#00f3ff]/10 hover:shadow-[0_0_25px_rgba(0,243,255,0.3)] transition-all"
+                            className="w-full sm:w-auto text-center px-8 py-4 bg-transparent border-2 border-[#00f3ff] text-[#00f3ff] font-black uppercase tracking-widest text-sm hover:bg-[#00f3ff]/10 hover:shadow-[0_0_25px_rgba(0,243,255,0.3)] transition-all"
                         >
                             Leer el blog
                         </Link>
